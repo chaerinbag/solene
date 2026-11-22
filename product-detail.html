@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매트릭스 | SOLÈNE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="sub.css">
+</head>
+<body class="sub">
+
+<header class="gnb solid">
+  <div class="wrap">
+    <nav aria-label="주요 메뉴">
+      <a href="product.html" class="on">Product</a><a href="index.html#collection">Collection</a><a href="index.html#archive">Archive</a><a href="about.html">About us</a>
+    </nav>
+    <a class="logo" href="index.html" aria-label="SOLÈNE 홈">SOLÈNE</a>
+    <div class="tools">
+      <a class="search" href="#"><span>매트릭스</span>
+        <svg viewBox="0 0 24 24" aria-label="검색"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m15.4 15.4 5 5"/></svg></a>
+      <a href="#" aria-label="로그인"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.6" r="3.9"/><path d="M4.6 20.2a7.4 7.4 0 0 1 14.8 0"/></svg></a>
+      <a href="#" aria-label="장바구니"><svg viewBox="0 0 24 24"><path d="M9 8.6V7.4a3 3 0 0 1 6 0v1.2"/><path d="M6.4 8.6h11.2a1 1 0 0 1 1 .9l.8 9.2a1.2 1.2 0 0 1-1.2 1.3H5.8a1.2 1.2 0 0 1-1.2-1.3l.8-9.2a1 1 0 0 1 1-.9Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="pd" aria-label="제품 정보">
+      <div class="gallery">
+        <div class="gal-card" id="gal">
+          <img class="badge-new" src="assets/badge-new.png" alt="NEW">
+          <img class="slide-img wide on" src="assets/d-main.jpg" alt="매트릭스 선글라스 정면">
+          <img class="slide-img" src="assets/d-2.jpg" alt="매트릭스 선글라스 뒷면">
+          <img class="slide-img" src="assets/d-3.jpg" alt="매트릭스 선글라스 측면">
+          <img class="slide-img" src="assets/d-4.jpg" alt="매트릭스 선글라스 사선">
+          <img class="slide-img cover" src="assets/d-5.jpg" alt="매트릭스 착용 컷">
+        </div>
+        <div class="thumbs-row" id="thumbs">
+          <button class="thumb" type="button" aria-label="1번 이미지" aria-current="true"><img src="assets/d-1.jpg" alt=""></button>
+          <button class="thumb" type="button" aria-label="2번 이미지" aria-current="false"><img src="assets/d-2-t.jpg" alt=""></button>
+          <button class="thumb" type="button" aria-label="3번 이미지" aria-current="false"><img src="assets/d-3-t.jpg" alt=""></button>
+          <button class="thumb" type="button" aria-label="4번 이미지" aria-current="false"><img src="assets/d-4-t.jpg" alt=""></button>
+          <button class="thumb" type="button" aria-label="5번 이미지" aria-current="false"><img src="assets/d-5-t.jpg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="info-col">
+        <div class="p-top">
+          <div>
+            <h1 class="p-name">매트릭스</h1>
+            <p class="p-price">₩300,000</p>
+          </div>
+          <button class="p-heart" type="button" aria-pressed="false" aria-label="찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </div>
+
+        <span class="opt-label">컬러</span>
+        <button class="swatch" type="button" id="swatch" aria-label="블랙" title="블랙" aria-pressed="true"></button>
+
+        <span class="opt-label" style="margin-top:22px">수량 선택</span>
+        <div class="qty">
+          <button type="button" id="minus" aria-label="수량 줄이기">−</button>
+          <output id="qty" aria-live="polite">0</output>
+          <button type="button" id="plus" aria-label="수량 늘리기">+</button>
+        </div>
+
+        <div class="sel-box" id="selbox" hidden>
+          <p id="seltxt">매트릭스 [선글라스] 1개,블랙</p>
+          <button class="x" type="button" id="selx" aria-label="선택 삭제"><svg viewBox="0 0 16 16"><path d="m2 2 12 12M14 2 2 14"/></svg></button>
+        </div>
+
+        <div class="total"><span class="cnt" id="cnt">총 0개</span><span class="sum"><span id="sum">0</span><small>원</small></span></div>
+
+        <div class="buy">
+          <button class="cart" type="button" id="cart">장바구니 담기</button>
+          <button class="now" type="button" id="now">바로 구매</button>
+        </div>
+
+        <div class="acc">
+          <div class="acc-item open">
+            <button class="acc-head" type="button" aria-expanded="true">주의사항<i></i></button>
+            <div class="acc-body"><div><p>뜨거운 차 안이나 직사광선이 내리쬐는 곳은 피해주세요. 프레임 핏과 렌즈 코팅을 오랫동안 건강하게 유지할 수 있습니다. 화장품이나 먼지가 묻었을 땐 찬물로 가볍게 씻어낸 후 전용 클리너로 부드럽게 닦아주세요.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head" type="button" aria-expanded="false">배송 안내<i></i></button>
+            <div class="acc-body"><div><p>결제 완료 후 영업일 기준 2~3일 이내에 출고되며, 출고 후 1~2일 안에 받아보실 수 있어요. 도서·산간 지역은 하루 이틀 더 걸릴 수 있습니다. 배송비는 3,000원이고 100,000원 이상 구매 시 무료입니다.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-head" type="button" aria-expanded="false">교환 및 반품 규정<i></i></button>
+            <div class="acc-body"><div><p>상품을 받은 날부터 7일 이내에 교환·반품을 신청할 수 있어요. 착용하거나 렌즈에 흠집이 생긴 경우, 전용 케이스와 구성품이 빠진 경우에는 어렵습니다. 단순 변심의 왕복 배송비는 고객님이 부담합니다.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="dt-tabs" role="tablist">
+      <button type="button" role="tab" id="tab-d" aria-selected="true" aria-controls="panel-d">제품 상세설명</button>
+      <button type="button" role="tab" id="tab-k" aria-selected="false" aria-controls="panel-k">제품 구성</button>
+    </div>
+  </div>
+
+  <div class="dt-panel" id="panel-d" role="tabpanel" aria-labelledby="tab-d">
+    <div class="size-band"><img src="assets/size-drawing.png" alt="매트릭스 사이즈 도면: 가로 145mm, 높이 12mm, 다리 길이 148mm"></div>
+    <div class="wrap">
+      <dl class="specs">
+        <div class="spec"><dt>소재</dt><dd>프리미엄 베타 티타늄</dd></div>
+        <div class="spec"><dt>렌즈</dt><dd>UV 400 차단 (99.9% UV 차단), 반사 방지</dd></div>
+        <div class="spec"><dt>무게</dt><dd>18.5g (초경량)</dd></div>
+        <div class="spec"><dt>컬러</dt><dd>매트 블랙 프레임 / 다크 그레이 렌즈</dd></div>
+        <div class="spec"><dt>성별</dt><dd>남녀공용</dd></div>
+        <div class="spec"><dt>상품 코드</dt><dd>EYE-BT-2026-BLK</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="dt-panel wrap" id="panel-k" role="tabpanel" aria-labelledby="tab-k" hidden>
+    <ul class="kit">
+      <li>선글라스 본품<small>1개</small></li>
+      <li>전용 하드 케이스<small>1개</small></li>
+      <li>클리닝 클로스<small>1장</small></li>
+      <li>보증서<small>1부</small></li>
+    </ul>
+  </div>
+
+  <div class="wrap similar">
+    <h2>비슷한 무드의 아이템</h2>
+    <div class="pgrid">
+        <a class="pcard" href="#">
+          <img class="ph" src="assets/p-legar.jpg" alt="르가르 선글라스" loading="lazy">
+          <span class="info"><span class="nm">르가르</span><span class="pr">₩300,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="르가르 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#">
+          <img class="ph" src="assets/p-focus.jpg" alt="포커스 선글라스" loading="lazy">
+          <span class="info"><span class="nm">포커스</span><span class="pr">₩400,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="포커스 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#">
+          <img class="ph" src="assets/p-ovalo.jpg" alt="오발로 선글라스" loading="lazy">
+          <span class="info"><span class="nm">오발로</span><span class="pr">₩600,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="오발로 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+    </div>
+  </div>
+</main>
+
+<div class="toast" id="toast" role="status"></div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-links"><a href="#">이용약관</a><a class="b" href="#">개인정보처리방침</a><a href="#">사업자정보확인</a><a href="about.html">브랜드 소개</a></div>
+      <p>주소 : 서울특별시 강남구 테헤란로 123, 5층 &nbsp; 사업자등록번호 : 123-91-23456 &nbsp; 대표 : 박채린 &nbsp; 운영 시간 : 평일 12:00 ~ 17:00(주말 및 공휴일 휴무)<br>제품 문의 : 1567-3456 &nbsp; 고객 문의 : 1234-6789 &nbsp; 메일 : Contact Solene@co.kr</p>
+    </div>
+    <div class="f-right"><div class="logo">SOLÈNE</div>© 2026 SOLÈNE. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5.5 11.5 6.5-6.5 6.5 6.5"/></svg></button>
+<script src="common.js"></script>
+
+<script>
+(function(){
+  /* 갤러리 */
+  var imgs=[].slice.call(document.querySelectorAll('#gal .slide-img'));
+  var thumbs=[].slice.call(document.querySelectorAll('#thumbs .thumb'));
+  var gal=document.getElementById('gal'), n=0;
+  function go(i){
+    n=(i+imgs.length)%imgs.length;
+    imgs.forEach(function(m,k){m.classList.toggle('on',k===n)});
+    thumbs.forEach(function(t,k){t.setAttribute('aria-current',k===n)});
+    gal.classList.toggle('on-photo',n===imgs.length-1);
+  }
+  thumbs.forEach(function(t,k){t.addEventListener('click',function(){go(k)})});
+  gal.addEventListener('click',function(e){
+    var r=gal.getBoundingClientRect(); go(e.clientX<r.left+r.width/2?n-1:n+1);
+  });
+
+  /* 수량 / 합계 : 컬러(블랙)는 기본 선택, 수량은 0에서 시작 */
+  var qty=0, price=300000;
+  var $=function(id){return document.getElementById(id)};
+  function fmt(v){return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+  function upd(){
+    $('qty').textContent=qty;
+    $('seltxt').textContent='매트릭스 [선글라스] '+qty+'개,블랙';
+    $('selbox').hidden=qty<1;
+    $('cnt').textContent='총 '+qty+'개';
+    $('sum').textContent=fmt(price*qty);
+  }
+  $('minus').onclick=function(){if(qty>0){qty--;upd()}};
+  $('plus').onclick=function(){if(qty<10){qty++;upd()}};
+  $('swatch').onclick=function(){}; // 단일 컬러라 항상 선택 상태
+  $('selx').onclick=function(){qty=0;upd()};
+
+  var tt;
+  function toast(msg){
+    var t=$('toast'); t.textContent=msg; t.classList.add('show');
+    clearTimeout(tt); tt=setTimeout(function(){t.classList.remove('show')},2200);
+  }
+  upd();
+  $('cart').onclick=function(){qty>0?toast('장바구니에 담았어요.'):toast('수량을 선택해 주세요.')};
+  $('now').onclick=function(){qty>0?toast('주문서 페이지는 준비 중이에요.'):toast('수량을 선택해 주세요.')};
+
+  /* 찜 */
+  var h=document.querySelector('.p-heart');
+  h.onclick=function(){h.setAttribute('aria-pressed',h.getAttribute('aria-pressed')!=='true')};
+  document.querySelector('.similar').addEventListener('click',function(e){
+    var b=e.target.closest('.heart'); if(!b) return;
+    e.preventDefault(); b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');
+  });
+
+  /* 아코디언 */
+  [].slice.call(document.querySelectorAll('.acc-head')).forEach(function(b){
+    b.addEventListener('click',function(){
+      var it=b.parentNode, open=!it.classList.contains('open');
+      it.classList.toggle('open',open); b.setAttribute('aria-expanded',open);
+    });
+  });
+
+  /* 상세설명 / 제품 구성 탭 */
+  var td=$('tab-d'), tk=$('tab-k');
+  function tab(d){
+    td.setAttribute('aria-selected',d); tk.setAttribute('aria-selected',!d);
+    $('panel-d').hidden=!d; $('panel-k').hidden=d;
+  }
+  td.onclick=function(){tab(true)}; tk.onclick=function(){tab(false)};
+})();
+</script>
+</body>
+</html>

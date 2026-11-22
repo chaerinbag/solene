@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About us | SOLÈNE</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="sub.css">
+<style>
+body.sub footer{margin-top:166px}
+.a-hero{display:block;width:100%;height:auto}
+.a-sec1{min-height:min(661px,60vw);display:grid;place-content:center;text-align:center;padding:90px 20px}
+.a-title{font:500 clamp(22px,2.1vw,32px)/1.35 var(--sans);letter-spacing:-.01em}
+.a-desc{margin:clamp(28px,3.5vw,56px) auto 0;max-width:520px;font-size:clamp(12px,.95vw,15px);line-height:1.9;color:#666;word-break:keep-all}
+.a-dark{position:relative;background:#000;overflow:hidden;padding-bottom:clamp(40px,6.5vw,110px)}
+.a-dark::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(ellipse 45% 40% at 100% 0%,#17171d 0,transparent 100%),radial-gradient(ellipse 50% 45% at 8% 92%,#1a1a24 0,transparent 100%)}
+/* 스크롤해서 섹션이 보이면: 배경이 먼저 아래에서 올라오고, 사진이 차례로 튀어나온 뒤 글이 나타남 */
+.a-dark::before,.a-dark img,.a-dark .txt{transition:transform 1.1s cubic-bezier(.22,1.25,.36,1),opacity .7s ease}
+.a-dark::before{transition:transform 1.4s cubic-bezier(.16,1,.3,1),opacity 1s ease}
+.a-dark .p1{transition-delay:.15s}.a-dark .p2{transition-delay:.3s}.a-dark .p3{transition-delay:.45s}
+.a-dark .txt{transition:transform .9s cubic-bezier(.16,1,.3,1) .7s,opacity .8s ease .7s}
+.js .a-dark:not(.in)::before{opacity:0;transform:translateY(35%)}
+.js .a-dark:not(.in) img{opacity:0;transform:translateY(180px)}
+.js .a-dark:not(.in) .txt{opacity:0;transform:translateY(40px)}
+.stage{position:relative;width:min(1136px,100% - 40px);margin-inline:auto}
+.a-dark .stage{aspect-ratio:698/625}
+.a-dark img,.a-sec3 img{position:absolute;height:auto}
+.a-dark img{border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+.a-dark .p1{left:0;top:11.2%;width:34.8%}
+.a-dark .p2{left:20.3%;top:49.3%;width:30.1%;rotate:-8deg}
+.a-dark .p3{left:78.2%;top:20.2%;width:22.3%;rotate:6deg}
+.a-dark .txt{position:absolute;left:55.4%;top:68%;width:44.6%;color:#fff}
+.a-dark .a-title{color:#fff}
+.a-dark .a-desc{margin:clamp(20px,3vw,48px) 0 0;max-width:none;color:#d8d8d8;font-size:clamp(11px,.9vw,15px)}
+.a-sec3 .stage{aspect-ratio:698/530}
+.a-sec3 .m{left:2.7%;top:15.3%;width:13.9%}
+.a-sec3 .w{left:86%;top:22.8%;width:12%}
+.a-sec3 .txt{position:absolute;left:50%;top:40%;transform:translateX(-50%);width:62%;text-align:center}
+.a-sec3 .a-desc{max-width:520px}
+.a-insta{position:relative;display:grid;place-items:center;aspect-ratio:2891/904;background:#222 url(assets/about-banner.jpg) center/cover;color:#fff;text-align:center}
+.a-insta .in{transform:translateY(8%)}
+.a-insta .big{display:flex;align-items:baseline;justify-content:center;gap:10px;font-size:clamp(14px,1.4vw,21px)}
+.a-insta .big b{font:900 clamp(16px,1.6vw,24px)/1 "Inter",sans-serif;letter-spacing:.02em}
+.a-insta .sm{margin-top:clamp(14px,1.8vw,26px);height:clamp(30px,2.9vw,42px);padding:0 clamp(14px,1.8vw,26px);font-size:clamp(11px,1vw,14px)}
+.a-insta .btn-stroke.light.sm:hover{background:transparent;color:#fff;opacity:.7}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:720px){.a-dark .txt{top:64%}}
+</style>
+</head>
+<body class="sub">
+
+<header class="gnb solid">
+  <div class="wrap">
+    <nav aria-label="주요 메뉴">
+      <a href="product.html">Product</a><a href="index.html#collection">Collection</a><a href="index.html#archive">Archive</a><a href="about.html" class="on">About us</a>
+    </nav>
+    <a class="logo" href="index.html" aria-label="SOLÈNE 홈">SOLÈNE</a>
+    <div class="tools">
+      <a class="search" href="#"><span>매트릭스</span>
+        <svg viewBox="0 0 24 24" aria-label="검색"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m15.4 15.4 5 5"/></svg></a>
+      <a href="#" aria-label="로그인"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.6" r="3.9"/><path d="M4.6 20.2a7.4 7.4 0 0 1 14.8 0"/></svg></a>
+      <a href="#" aria-label="장바구니"><svg viewBox="0 0 24 24"><path d="M9 8.6V7.4a3 3 0 0 1 6 0v1.2"/><path d="M6.4 8.6h11.2a1 1 0 0 1 1 .9l.8 9.2a1.2 1.2 0 0 1-1.2 1.3H5.8a1.2 1.2 0 0 1-1.2-1.3l.8-9.2a1 1 0 0 1 1-.9Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1 class="sr-only">SOLÈNE 브랜드 소개 — Identity in every line</h1>
+  <img class="a-hero" src="assets/about-hero.jpg" alt="Identity in every line. 선글라스를 쓴 모델">
+
+  <section class="a-sec1">
+    <h2 class="a-title">당신의 일상에 가볍게 스며들 수 있도록.</h2>
+    <p class="a-desc">특별한 날에만 찾는 과장된 디자인이 아닌, 평범한 매 순간을 감각적으로 채워주는 에센셜 피스를 제안합니다. 어떤 룩과 표정에도 자연스럽게 어우러지는 솔렌만의 섬세한 디테일이 당신의 일상을 한층 더 편안하고 우아하게 완성합니다.</p>
+  </section>
+
+  <section class="a-dark">
+    <div class="stage">
+      <img class="p1" src="assets/about-p1.jpg" alt="검은 머리 여성 모델 포트레이트">
+      <img class="p3" src="assets/about-p3.jpg" alt="웃고 있는 남성 모델">
+      <img class="p2" src="assets/about-p2.jpg" alt="안경을 쓰고 포즈를 취한 모델">
+      <div class="txt">
+        <h2 class="a-title">비치는 건, 오롯이 나라는 존재.</h2>
+        <p class="a-desc">Solene(솔렌)은 착용하는 사람 고유의 분위기를 정갈하게 다듬어주는 디자인에서 시작되었습니다. 무분별한 디테일은 비워내고, 선글라스 본연의 또렷한 쉐입과 조형미에 집중하여 당신이라는 존재가 가장 돋보일 수 있도록 돕고자 합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-sec3">
+    <div class="stage">
+      <img class="m" src="assets/about-m.png" alt="선글라스를 쓴 남성 모델 전신">
+      <img class="w" src="assets/about-w.png" alt="선글라스를 쓴 여성 모델 전신">
+      <div class="txt">
+        <h2 class="a-title">의식하지 못할 만큼 자연스럽게.</h2>
+        <p class="a-desc">시선을 거스르지 않는 부드러운 곡선과 정교한 밸런스. 입고 있는 옷이나 그날의 무드에 억지로 맞출 필요 없이, 언제나 그 자리에 있었던 것처럼 당신의 고유한 분위기를 완성해 줍니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <a class="a-insta" href="#" aria-label="SOLÈNE 인스타그램">
+    <div class="in">
+      <div class="big"><b>SOLÈNE</b><span>자세히 알아보기</span></div>
+      <span class="sm btn-stroke light"><span class="wt" data-t="Instagram">Instagram</span> <svg class="chev" viewBox="0 0 10 10"><path d="m3 1 4 4-4 4"/></svg></span>
+    </div>
+  </a>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-links"><a href="#">이용약관</a><a class="b" href="#">개인정보처리방침</a><a href="#">사업자정보확인</a><a href="about.html">브랜드 소개</a></div>
+      <p>주소 : 서울특별시 강남구 테헤란로 123, 5층 &nbsp; 사업자등록번호 : 123-91-23456 &nbsp; 대표 : 박채린 &nbsp; 운영 시간 : 평일 12:00 ~ 17:00(주말 및 공휴일 휴무)<br>제품 문의 : 1567-3456 &nbsp; 고객 문의 : 1234-6789 &nbsp; 메일 : Contact Solene@co.kr</p>
+    </div>
+    <div class="f-right"><div class="logo">SOLÈNE</div>© 2026 SOLÈNE. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5.5 11.5 6.5-6.5 6.5 6.5"/></svg></button>
+<script src="common.js"></script>
+<script>
+(function(){
+  var s=document.querySelector('.a-dark'); if(!s) return;
+  if(!('IntersectionObserver' in window)){s.classList.add('in');return}
+  new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){s.classList.add('in');o.disconnect()}})},{threshold:.25}).observe(s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product | SOLÈNE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="sub.css">
+</head>
+<body class="sub">
+
+<header class="gnb solid">
+  <div class="wrap">
+    <nav aria-label="주요 메뉴">
+      <a href="product.html" class="on">Product</a><a href="index.html#collection">Collection</a><a href="index.html#archive">Archive</a><a href="about.html">About us</a>
+    </nav>
+    <a class="logo" href="index.html" aria-label="SOLÈNE 홈">SOLÈNE</a>
+    <div class="tools">
+      <a class="search" href="#"><span>매트릭스</span>
+        <svg viewBox="0 0 24 24" aria-label="검색"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m15.4 15.4 5 5"/></svg></a>
+      <a href="#" aria-label="로그인"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.6" r="3.9"/><path d="M4.6 20.2a7.4 7.4 0 0 1 14.8 0"/></svg></a>
+      <a href="#" aria-label="장바구니"><svg viewBox="0 0 24 24"><path d="M9 8.6V7.4a3 3 0 0 1 6 0v1.2"/><path d="M6.4 8.6h11.2a1 1 0 0 1 1 .9l.8 9.2a1.2 1.2 0 0 1-1.2 1.3H5.8a1.2 1.2 0 0 1-1.2-1.3l.8-9.2a1 1 0 0 1 1-.9Z"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1 class="pg-title">Product</h1>
+
+    <div class="cats" role="group" aria-label="카테고리">
+      <button type="button" data-f="all" aria-pressed="true">ALL</button>
+      <button type="button" data-f="sun" aria-pressed="false">Sunglasses</button>
+      <button type="button" data-f="glasses" aria-pressed="false">Glasses</button>
+    </div>
+
+    <div class="sortbar">
+      <div class="sort" id="sort">
+        <button type="button" aria-haspopup="listbox" aria-expanded="false"><span id="sort-label">인기순</span>
+          <svg viewBox="0 0 14 14" aria-hidden="true"><path d="m2 5 5 5 5-5"/></svg></button>
+        <ul role="listbox" aria-label="정렬">
+          <li><button type="button" role="option" data-s="pop" aria-selected="true">인기순</button></li>
+          <li><button type="button" role="option" data-s="new" aria-selected="false">신상품순</button></li>
+          <li><button type="button" role="option" data-s="low" aria-selected="false">낮은 가격순</button></li>
+          <li><button type="button" role="option" data-s="high" aria-selected="false">높은 가격순</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <p id="noresult" hidden style="padding:80px 0;text-align:center;font-size:14px;color:#777">검색 결과가 없습니다.</p>
+    <div class="pgrid" id="pgrid">
+        <a class="pcard has-hover" href="product-detail.html" data-cat="sun" data-price="300000" data-new="1" data-pop="0">
+          <span class="hover-ph" style="background-image:url(assets/p-matrix-hover.jpg)"></span>
+          <img class="badge-new" src="assets/badge-new.png" alt="NEW">
+          <img class="ph" src="assets/p-matrix.jpg" alt="매트릭스 선글라스" loading="lazy">
+          <span class="info"><span class="nm">매트릭스</span><span class="pr">₩300,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="매트릭스 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard has-hover" href="#" data-cat="sun" data-price="400000" data-new="1" data-pop="1">
+          <span class="hover-ph" style="background-image:url(assets/p-focus-hover.jpg)"></span>
+          <img class="badge-new" src="assets/badge-new.png" alt="NEW">
+          <img class="ph" src="assets/p-focus.jpg" alt="포커스 선글라스" loading="lazy">
+          <span class="info"><span class="nm">포커스</span><span class="pr">₩400,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="포커스 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard has-hover" href="#" data-cat="sun" data-price="600000" data-new="1" data-pop="2">
+          <span class="hover-ph" style="background-image:url(assets/p-ovalo-hover.jpg)"></span>
+          <img class="badge-new" src="assets/badge-new.png" alt="NEW">
+          <img class="ph" src="assets/p-ovalo.jpg" alt="오발로 선글라스" loading="lazy">
+          <span class="info"><span class="nm">오발로</span><span class="pr">₩600,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="오발로 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="350000" data-new="0" data-pop="3">
+          <img class="ph" src="assets/p-rayon.jpg" alt="레용 선글라스" loading="lazy">
+          <span class="info"><span class="nm">레용</span><span class="pr">₩350,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="레용 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="glasses" data-price="380000" data-new="0" data-pop="4">
+          <img class="ph" src="assets/p-ecla.jpg" alt="에끌라 안경" loading="lazy">
+          <span class="info"><span class="nm">에끌라</span><span class="pr">₩380,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="에끌라 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="450000" data-new="0" data-pop="5">
+          <img class="ph" src="assets/p-edge.jpg" alt="에지 선글라스" loading="lazy">
+          <span class="info"><span class="nm">에지</span><span class="pr">₩450,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="에지 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="500000" data-new="0" data-pop="6">
+          <img class="ph" src="assets/p-clarte.jpg" alt="끌라르떼 선글라스" loading="lazy">
+          <span class="info"><span class="nm">끌라르떼</span><span class="pr">₩500,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="끌라르떼 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="300000" data-new="0" data-pop="7">
+          <img class="ph" src="assets/p-legar.jpg" alt="르가르 선글라스" loading="lazy">
+          <span class="info"><span class="nm">르가르</span><span class="pr">₩300,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="르가르 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="glasses" data-price="300000" data-new="0" data-pop="8">
+          <img class="ph" src="assets/p-bua.jpg" alt="부아 안경" loading="lazy">
+          <span class="info"><span class="nm">부아</span><span class="pr">₩300,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="부아 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="300000" data-new="0" data-pop="9">
+          <span class="colors" aria-label="컬러 옵션: 로즈, 블랙"><i style="background:#c9747a" title="로즈"></i><i style="background:#000" title="블랙"></i></span>
+          <img class="ph" src="assets/p-ombre.jpg" alt="옴브르 선글라스" loading="lazy">
+          <span class="info"><span class="nm">옴브르</span><span class="pr">₩300,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="옴브르 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="glasses" data-price="250000" data-new="0" data-pop="10">
+          <img class="ph" src="assets/p-purity.jpg" alt="퓨리티 안경" loading="lazy">
+          <span class="info"><span class="nm">퓨리티</span><span class="pr">₩250,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="퓨리티 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+        <a class="pcard" href="#" data-cat="sun" data-price="350000" data-new="0" data-pop="11">
+          <img class="ph" src="assets/p-ovalo2.jpg" alt="오발로 선글라스" loading="lazy">
+          <span class="info"><span class="nm">오발로</span><span class="pr">₩350,000</span></span>
+          <button class="heart" type="button" aria-pressed="false" aria-label="오발로 찜하기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.3 4.6 13.2a4.7 4.7 0 0 1 6.6-6.7l.8.8.8-.8a4.7 4.7 0 0 1 6.6 6.7L12 20.3Z"/></svg></button>
+        </a>
+    </div>
+
+    <div class="more-wrap"><button class="more-btn" type="button" id="more">More <span>1/10</span><svg viewBox="0 0 10 10" aria-hidden="true"><path d="m3 1 4 4-4 4"/></svg></button></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-links"><a href="#">이용약관</a><a class="b" href="#">개인정보처리방침</a><a href="#">사업자정보확인</a><a href="about.html">브랜드 소개</a></div>
+      <p>주소 : 서울특별시 강남구 테헤란로 123, 5층 &nbsp; 사업자등록번호 : 123-91-23456 &nbsp; 대표 : 박채린 &nbsp; 운영 시간 : 평일 12:00 ~ 17:00(주말 및 공휴일 휴무)<br>제품 문의 : 1567-3456 &nbsp; 고객 문의 : 1234-6789 &nbsp; 메일 : Contact Solene@co.kr</p>
+    </div>
+    <div class="f-right"><div class="logo">SOLÈNE</div>© 2026 SOLÈNE. All rights reserved.</div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="맨 위로"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5.5 11.5 6.5-6.5 6.5 6.5"/></svg></button>
+<script src="common.js"></script>
+
+<script>
+(function(){
+  var grid=document.getElementById('pgrid');
+  var cards=[].slice.call(grid.children);
+  var tabs=[].slice.call(document.querySelectorAll('.cats button'));
+  var sortBox=document.getElementById('sort');
+  var sortBtn=sortBox.querySelector(':scope > button');
+  var opts=[].slice.call(sortBox.querySelectorAll('li button'));
+  var mode='pop', filter='all';
+  var q=(new URLSearchParams(location.search).get('q')||'').trim();
+
+  function render(){
+    var list=cards.slice();
+    list.sort(function(a,b){
+      var pa=+a.dataset.price, pb=+b.dataset.price, oa=+a.dataset.pop, ob=+b.dataset.pop;
+      if(mode==='low') return pa-pb||oa-ob;
+      if(mode==='high') return pb-pa||oa-ob;
+      if(mode==='new') return (+b.dataset.new)-(+a.dataset.new)||oa-ob;
+      return oa-ob;
+    });
+    list.forEach(function(c){
+      var nm=c.querySelector('.nm').textContent;
+      c.hidden = !((filter==='all'||c.dataset.cat===filter) && (!q||nm.indexOf(q)>-1));
+      grid.appendChild(c);
+    });
+    var none=document.getElementById('noresult');
+    if(none) none.hidden=!!list.some(function(c){return !c.hidden});
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      filter=t.dataset.f;
+      tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+      render();
+    });
+  });
+  sortBtn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=!sortBox.classList.contains('open');
+    sortBox.classList.toggle('open',open);
+    sortBtn.setAttribute('aria-expanded',open);
+  });
+  opts.forEach(function(o){
+    o.addEventListener('click',function(){
+      mode=o.dataset.s;
+      opts.forEach(function(x){x.setAttribute('aria-selected',x===o)});
+      document.getElementById('sort-label').textContent=o.textContent;
+      sortBox.classList.remove('open'); sortBtn.setAttribute('aria-expanded','false');
+      render();
+    });
+  });
+  document.addEventListener('click',function(){sortBox.classList.remove('open');sortBtn.setAttribute('aria-expanded','false')});
+
+  if(q) render();
+
+  // 찜하기(하트): 카드 이동 없이 토글만
+  grid.addEventListener('click',function(e){
+    var h=e.target.closest('.heart'); if(!h) return;
+    e.preventDefault(); e.stopPropagation();
+    h.setAttribute('aria-pressed',h.getAttribute('aria-pressed')!=='true');
+  });
+})();
+</script>
+</body>
+</html>
